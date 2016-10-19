@@ -54,7 +54,6 @@ function drawMarker(all) {
 
   for(var i=0; i < arr.length; i++) {
       arr[i].marker.setVisible(true);
-
   }
 }
 
@@ -108,4 +107,12 @@ var ViewModel = function() {
       infoWindow.open(map, hotelPlaces.marker);
     }
   }
+
+  this.openNav = function() {
+      document.getElementById("side-nav").style.width = "250px";
+  };
+
+  this.closeNav = function() {
+      document.getElementById("side-nav").style.width = "0px";
+  };
 };
