@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="library/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="Component/Style/master.css" media="screen" title="no title">
+  </head>
+  <body class="container-fluid">
+    <div id="side-nav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" data-bind="click: closeNav">&times;</a>
+         <input type="text" class="form-control" placeholder="hotel name" data-bind="textInput: query">
+         <hr>
+         <ul data-bind="foreach: hotelPlace">
+           <li data-bind="text: title, click: $parent.onPlaceClicked"></li>
+         </ul>
+       </div>
+
+       <button data-bind="click: openNav" class="btn btn-default"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span></button>
+
+       <div class="row">
+         <div class="col-md-12" id="map"></div>
+       </div>
+    <script src="library/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="library/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="Framework/knockout/knockout.js" charset="utf-8"></script>
+    <script src="Component/Script/app.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyGJHmLKUkvl11lKbyvApJkscxEN4uOSU&callback=initMap"
+    async defer></script>
+  </body>
+</html>
