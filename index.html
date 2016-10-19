@@ -12,7 +12,7 @@
          <a href="javascript:void(0)" class="closebtn" data-bind="click: closeNav">&times;</a>
          <input type="text" class="form-control" placeholder="hotel name" data-bind="textInput: query">
          <hr>
-         <ul data-bind="foreach: hotelPlace">
+         <ul data-bind="foreach: listhotel">
            <li data-bind="text: title, click: $parent.onPlaceClicked"></li>
          </ul>
        </div>
